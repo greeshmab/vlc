@@ -28,7 +28,41 @@
         </ul>
       </header>
       <section>
-        <h2>
+        <h3>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h3>
+
+<p>I have worked on adding standard closed captioning <a href="https://en.wikipedia.org/wiki/CEA-708">CEA 708</a> features to VLC in addition to existing EIA 608 features. </p>
+
+<h4>
+<a id="appearance" class="anchor" href="#appearance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Appearance</h4>
+
+<p>The additional structures are added for new features added
+<em>eia708_PenAttribs_Size</em> -  3 text sizes</p>
+
+<p><em>eia708_PenAttribs_FontTag</em> - 8 font options</p>
+
+<p><em>eia708_PenColor</em> - 64 text colors, and 64 background colors</p>
+
+<p><em>eia708_PenColor_Opacity</em> - background opacity and dropshadowed or edged text
+and other visual features</p>
+
+<h4>
+<a id="language" class="anchor" href="#language" aria-hidden="true"><span class="octicon octicon-link"></span></a>Language</h4>
+
+<p>708 captions have a complete library of special characters and symbols and are designed to support any alphabet in the world </p>
+
+<h4>
+<a id="position" class="anchor" href="#position" aria-hidden="true"><span class="octicon octicon-link"></span></a>Position</h4>
+
+<p>708 captions do not have to be fixed in one position. The window position can be adjusted accordingly which makes the user easy to change it according to the video which is being watched.
+<em>eia708_WindowAttribs,eia708_WindowAttribs_AnchorID,eia708_WindowAttribs_Justify</em> are the new structures defined to define the position.</p>
+
+<p>The above structures are defined with the knowledge from the wikipedia page and some other sources. 
+Some of basic set functions are also defined. pen color,pen attributes,pen location are all set to default. The reset function is also added.</p>
+
+<p>The main structure <strong>eia708_t</strong> which is defined which consists of n windows.The present window has the features of pen,position and data.</p>
+
+<h2>
 <a id="compiling-vlc---basics" class="anchor" href="#compiling-vlc---basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compiling VLC - Basics</h2>
 
 <p>The basics of compiling VLC in debian/ubuntu are already given in the <a href="https://wiki.videolan.org/UnixCompile/">VLC Compile</a>
